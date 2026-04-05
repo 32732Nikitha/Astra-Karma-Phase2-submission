@@ -5,7 +5,7 @@ import LoadingScreen from './components/common/LoadingScreen'
 import ErrorBoundary from './components/common/ErrorBoundary'
 import { Toaster } from "react-hot-toast";
 import MainLayout from './components/layout/MainLayout'
-import GigWorkerCursor from './components/GigWorkerCursor';
+// import GigWorkerCursor from './components/GigWorkerCursor';
 
 // Lazy-loaded pages
 const Login = lazy(() => import('./pages/Login'))
@@ -83,7 +83,7 @@ export default function App() {
   return (
     <ErrorBoundary>
       <LandingAuthBridge />
-      <GigWorkerCursor />
+      {/* <GigWorkerCursor /> */}
       <BrowserRouter basename="/worker">
         <Suspense fallback={<LoadingScreen />}>
           <Routes>
