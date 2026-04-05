@@ -6,14 +6,14 @@ import pandas as pd
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 MODEL_DIR = os.path.join(BASE_DIR, "ml", "models")
 
-# Load models once (GLOBAL)
-# Hackathon bypass: Try loading the model, use dummy if not found
+# Hackathon bypass: Try loading the models, use dummy if not found
 try:
     fraud_model = joblib.load(os.path.join(MODEL_DIR, "fraud_model.pkl"))
+    fraud_features = joblib.load(os.path.join(MODEL_DIR, "fraud_features.pkl"))
 except FileNotFoundError:
-    print("Warning: fraud_model.pkl not found. Using fallback mock mode.")
+    print("Warning: ML models not found. Using fallback mock mode.")
     fraud_model = None
-fraud_features = joblib.load(os.path.join(MODEL_DIR, "fraud_features.pkl"))
+    fraud_features = []
 
 # Import decision engine
 from app.ml.src.decision_engine import make_fraud_decision
@@ -23,6 +23,10 @@ def prepare_input(data: dict):
     return df
 
 def predict_fraud(data: dict):
+    # Model lekapothe crash avvakunda hackathon dummy score isthundi
+    if fraud_model is None:
+        return 0.15 
+
     try:
         df = prepare_input(data)
 
@@ -36,7 +40,6 @@ def predict_fraud(data: dict):
     except Exception as e:
         print("ML ERROR:", e)
         return 0.0
-
 
 def run_fraud_pipeline(data: dict):
     """
