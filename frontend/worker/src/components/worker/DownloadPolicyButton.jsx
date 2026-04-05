@@ -7,7 +7,7 @@ export default function DownloadPolicyButton({ policyNumber = 'BGS-2026-00412' }
   const handle = () => {
     setLoading(true);
     setTimeout(() => {
-      const content = `BHIMA ASTRA GigShield Policy\nPolicy Number: ${policyNumber}\nGenerated: ${new Date().toLocaleString('en-IN')}\n\n[Full policy document would be here]`;
+      const content = `BHIMA ASTRA Insurance Policy\nPolicy Number: ${policyNumber}\nGenerated: ${new Date().toLocaleString('en-IN')}\n\n[Full policy document would be here]`;
       const blob = new Blob([content], { type: 'application/pdf' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');

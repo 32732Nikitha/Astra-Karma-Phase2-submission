@@ -93,7 +93,7 @@ export default function AdminLoginPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full rounded-lg border border-white/10 bg-slate-950 px-3 py-2.5 text-sm text-white placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="admin@bhimaastra.com"
+              placeholder="admin@bhimaastra.in"
               autoComplete="email"
             />
           </div>
