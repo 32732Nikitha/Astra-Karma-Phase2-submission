@@ -244,7 +244,7 @@ BHIMA ASTRA addresses these through:
 
 <img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/110c7cf7-e7e9-473f-a0d4-f75d0b062993" /> <img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/26782cf7-cad8-46f4-a603-a1012517c573" />
 
-<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/8f4cd591-da85-4096-b0d5-93b4515a632a" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/27ceb721-f926-40cd-b955-d8805dd42a40" /><img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/91eeae0f-dde1-4a6d-beba-3f86be55d80c" />
+<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/8f4cd591-da85-4096-b0d5-93b4515a632a" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/27ceb721-f926-40cd-b955-d8805dd42a40" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/91eeae0f-dde1-4a6d-beba-3f86be55d80c" />
 
 
 ### 3. Infrastructure & Deployment
