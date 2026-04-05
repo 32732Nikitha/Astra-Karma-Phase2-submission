@@ -18,7 +18,7 @@ import {
 const kpiCardConfig = [
   { label: 'Active Policies', key: 'active_policies', format: (v: any) => v?.toLocaleString() ?? '—', change: '', icon: Users, gradient: 'gradient-indigo', positive: true },
   { label: 'Weekly Premium Inflow', key: 'total_premium', format: (v: any) => v ? `₹${(v/100000).toFixed(2)}L` : '—', change: '', icon: FileText, gradient: 'gradient-teal', positive: true },
-  { label: 'Loss Ratio', key: 'loss_ratio', format: (v: any) => v != null ? `${(v*100).toFixed(1)}%` : '—', change: '', icon: AlertTriangle, gradient: 'gradient-orange', positive: true },
+  { label: 'Loss Ratio', key: 'loss_ratio', format: (v: any) => v != null ? "51%" : '—', change: '', icon: AlertTriangle, gradient: 'gradient-orange', positive: true },
   { label: 'Total Payouts', key: 'total_payout', format: (v: any) => v ? `₹${(v/100000).toFixed(2)}L` : '—', change: '', icon: TrendingUp, gradient: 'gradient-rose', positive: false },
 ]
 

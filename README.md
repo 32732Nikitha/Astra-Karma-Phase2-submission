@@ -34,12 +34,13 @@ BHIMA ASTRA addresses these through:
 3. **Behavioral anomaly detection** with historical baselines
 4. **Automated claims triage** based on risk bands
 5. **Geospatial correlation** linking location, incident, and claims data
+6. **Pandemic and War Situation:** During large-scale disruptions such as pandemics, or socio-political disturbances such as wars, gig workers face significant income volatility due to the lack of responsive financial protection systems. While designing the system, we intentionally chose not to include direct income coverage, as it does not reflect the practical and scalable realities of gig work environments. Income patterns in the gig economy are highly variable and influenced by multiple external factors, making precise loss compensation complex and unreliable. Instead, our approach focuses on parametric triggers and predefined payouts, ensuring faster, transparent, and dependable support during disruptions. This makes the solution more realistic, implementable, and aligned with real-world constraints.
 
 ---
 
 ##  Implementation Status
 
-### ✅ Fully Implemented & Tested
+### Fully Implemented & Tested
 - ✅ OTP-based worker authentication (phone login)
 - ✅ Policy creation, renewal, cancellation, tier upgrades
 - ✅ Claim submission and tracking with audit trails
@@ -59,13 +60,13 @@ BHIMA ASTRA addresses these through:
 - ✅ Event/disruption log (30-day history)
 - ✅ Multi-role dashboards (admin, worker, manager, landing page)
 
-### 🟡 Partially Implemented
+### Partially Implemented
 - 🟡 Payment gateway integration (Razorpay sandbox mode - not live)
 - 🟡 Automated batch payout execution (framework present, final integration pending)
 - 🟡 Real SMS/OTP delivery (demo/sandbox mode - not live)
 - 🟡 Production deployment (demo-ready on Render - single instance)
 
-### ⏳ Roadmap / Not Yet Implemented
+### Roadmap / To be Implemented
 - ❌ Real-time worker geolocation tracking
 - ❌ Automated payout batch processing (live payment)
 - ❌ SMS notification system (framework only)
@@ -180,6 +181,12 @@ BHIMA ASTRA addresses these through:
 - `/admin/triggers` - Zone disruption data and trigger simulation
 - `/admin/settings` - Configuration and administrative settings
 
+<img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/5a8bdea0-202d-42e4-bd99-c5619f6e6acb" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/37e8f446-b542-49c1-8438-9c343b65ca9b" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/68a742cd-2ea3-4b6d-8868-5f55a52fbdde" /> 
+
+<img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/992cffb0-2dbb-42c6-9d18-6896eaff6a53" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/c69eb435-2fdd-4266-b998-06a000034821" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/250d7104-e37d-44a0-879a-84bdb3cffa44" />
+
+<img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/8152dae0-c010-4a0e-b1a9-3fe207d74da5" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/10e3b290-9011-4f33-ba16-5690ac2a2234" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/e5060845-9951-49f3-a539-e10e82b61985" />
+
 #### Worker Portal
 - **Vite 5+**: Build tool and development server
   - Instant module replacement (HMR) for developer experience
@@ -202,6 +209,13 @@ BHIMA ASTRA addresses these through:
 - Profile - Personal details and settings
 - Register - New worker registration flow
 
+<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/97b77d7d-7b57-4380-8b92-f4653fe31b98" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/9fc2468d-2712-425e-a9f0-8ceeb2239e27" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/8e88bf22-b54d-4ab3-9c6f-e5bbab6390eb" />
+
+<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/f748d198-e343-4313-8c8f-0e773729a2f4" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/8cb10064-c566-407e-adc5-31e7f4e16123" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/4a948c46-d50a-424f-8f5b-9ec5069a775c" />
+
+<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/a642d34c-abe9-4537-9c8d-684b93c0f26a" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/ca0bf65c-aa1c-44cb-8403-f48f60a53d18" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/ea49e9fe-8736-4e11-a6da-2c91b287ffc1" />
+
+
 #### Manager Dashboard
 - **Vite 5+**: Build tool and development server
 - **React 18.2+**: Component library with hooks
@@ -216,6 +230,8 @@ BHIMA ASTRA addresses these through:
 - Daily operations metrics
 - Role-based access control
 
+<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/4d610cf4-8d58-4986-8380-05e26422b7d3" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/8d858ea8-3acd-4ee1-ab48-738fa3e33097" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/720150d4-2079-4816-be04-2ed6ca4a9867" />
+
 #### Landing Page
 - **Next.js 14 + TypeScript**: Marketing site with SEO optimization
 - **Markdown-based content**: CMS-less approach for low maintenance
@@ -224,6 +240,13 @@ BHIMA ASTRA addresses these through:
 - Home/Hero - Public landing page with value proposition
 - Get Protected - Iframe wrapper for enrollment flow
 - Portal Navigation - Links to worker, admin, manager dashboards
+
+<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/e3bf7018-dc95-46a3-8690-b4161be1eee5" /> <img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/6e9a6037-2b4f-4065-8155-60427d2a2803" /> <img width="330" height="250" alt="image" src="https://github.com/user-attachments/assets/94debdc1-233f-40a3-8728-8b9d51b3efdf" /> 
+
+<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/110c7cf7-e7e9-473f-a0d4-f75d0b062993" /> <img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/26782cf7-cad8-46f4-a603-a1012517c573" />
+
+<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/8f4cd591-da85-4096-b0d5-93b4515a632a" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/27ceb721-f926-40cd-b955-d8805dd42a40" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/91eeae0f-dde1-4a6d-beba-3f86be55d80c" />
+
 
 ### 3. Infrastructure & Deployment
 
@@ -308,7 +331,7 @@ BHIMA ASTRA addresses these through:
 
 ---
 
-## 📁 Project Structure (Detailed)
+## 📁 Project Structure
 
 ```
 bhima_astra_full2/
@@ -375,7 +398,7 @@ API available at: `http://localhost:8000`
 ### 2. Admin Portal
 
 ```bash
-cd frontend/admin
+cd frontend/landingPage
 
 # Install dependencies
 npm install
@@ -385,18 +408,6 @@ npm run dev
 ```
 
 Available at: `http://localhost:3000`
-
-### 3. Worker/Manager Apps (Local)
-
-```bash
-cd frontend/worker
-npm install
-npm run dev  # http://localhost:5173
-
-cd ../manager
-npm install
-npm run dev  # http://localhost:5174
-```
 
 ---
 
@@ -1155,8 +1166,7 @@ bandit -r app/  # Code security issues
 ---
 
 **Last Updated**: April 5, 2026
-**Maintained By**: Platform Engineering Team
-**License**: Proprietary & Confidential
+**Maintained By**: Team Astra Karma
 
 ---
 
@@ -1374,9 +1384,9 @@ flowchart TD
     A["<b>Incoming Claim</b><br/>worker_id, amount, date"] --> B["<b>Stage 1: Rule Engine</b><br/>Deterministic Checks<br/>~5ms latency"]
     
     B --> C{Rule Score}
-    C -->|> 0.85<br/>BLOCK| D["❌ Hard Reject<br/>No Further Processing"]
+    C -->|> 0.85<br/>BLOCK| D["Hard Reject<br/>No Further Processing"]
     C -->|0.50-0.85<br/>HIGH| E["<b>Stage 2: XGBoost</b><br/>Behavioral Scoring<br/>~50ms latency"]
-    C -->|< 0.50<br/>LOW| F["✅ Expedited Approval<br/>Flag for Audit"]
+    C -->|< 0.50<br/>LOW| F["Expedited Approval<br/>Flag for Audit"]
     
     E --> G{XGBoost Score}
     G -->|> 0.85<br/>HIGH| H["<b>Stage 3: Graph Network</b><br/>Fraud Ring Detection<br/>~200ms cached"]
@@ -1388,14 +1398,14 @@ flowchart TD
     I -->|Isolated/Linked| J
     
     J --> K{Final Score<br/>0-1}
-    K -->|≥ 0.85| L["🚨 Manual Review<br/>Senior Investigator"]
+    K -->|≥ 0.85| L["Manual Review<br/>Senior Investigator"]
     K -->|0.70-0.85| L
-    K -->|0.50-0.70| M["✅ Approved<br/>with Flag<br/>5% Audit"]
-    K -->|< 0.50| N["✅ Auto Approve<br/>Low Risk"]
+    K -->|0.50-0.70| M["Approved<br/>with Flag<br/>5% Audit"]
+    K -->|< 0.50| N["Auto Approve<br/>Low Risk"]
     
-    D --> O["📋 Fraud Case Created"]
+    D --> O["Fraud Case Created"]
     L --> O
-    M --> P["✅ Claim Processing"]
+    M --> P["Claim Processing"]
     N --> P
     
     style A fill:#e1f5ff
@@ -1692,18 +1702,9 @@ cd backend
 pytest tests/
 
 # Frontend tests
-cd frontend/admin
+cd frontend/landingPage
 npm test
 ```
-
----
-
-##  Additional Resources
-
-- [Render Deployment Guide](docs/DEPLOY-RENDER.md)
-- [API Documentation](http://localhost:8000/docs) (Swagger)
-- [Database Schema](backend/app/db/models/) — SQLAlchemy models
-- [ML Pipeline](backend/app/ml/src/) — Feature engineering & models
 
 ---
 
@@ -1724,8 +1725,6 @@ npm test
 - Advanced analytics & custom reporting
 - Multi-currency support
 - International market expansion
-
-See: [Render Deployment Guide](docs/DEPLOY-RENDER.md) for implementation details.
 
 ---
 
@@ -1799,4 +1798,4 @@ For issues or questions:
 
 ---
 
-**Designed as solution.. Learnt for life**
+**Designed as solution.. Learnt for life** - Astra Karma
