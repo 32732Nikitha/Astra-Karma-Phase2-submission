@@ -16,7 +16,7 @@ export function Footer() {
         {/* Footer Links */}
         <div className="mb-16 grid grid-cols-2 gap-8 md:grid-cols-4">
           <div>
-            <h3 className="mb-6 text-xs font-mono uppercase tracking-widest" style={{ color: "#84f57c" }}>
+            <h3 className="mb-6 text-xs font-mono uppercase tracking-widest" style={{ color: "#8b5cf6" }}>
               Product
             </h3>
             <ul className="flex flex-col gap-4 text-sm" style={{ color: "#737373" }}>
@@ -43,7 +43,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-6 text-xs font-mono uppercase tracking-widest" style={{ color: "#84f57c" }}>
+            <h3 className="mb-6 text-xs font-mono uppercase tracking-widest" style={{ color: "#8b5cf6" }}>
               Company
             </h3>
             <ul className="flex flex-col gap-4 text-sm" style={{ color: "#737373" }}>
@@ -70,7 +70,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-6 text-xs font-mono uppercase tracking-widest" style={{ color: "#84f57c" }}>
+            <h3 className="mb-6 text-xs font-mono uppercase tracking-widest" style={{ color: "#8b5cf6" }}>
               Resources
             </h3>
             <ul className="flex flex-col gap-4 text-sm" style={{ color: "#737373" }}>
@@ -97,7 +97,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-6 text-xs font-mono uppercase tracking-widest" style={{ color: "#84f57c" }}>
+            <h3 className="mb-6 text-xs font-mono uppercase tracking-widest" style={{ color: "#8b5cf6" }}>
               Legal
             </h3>
             <ul className="flex flex-col gap-4 text-sm" style={{ color: "#737373" }}>
@@ -137,7 +137,7 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <div 
               className="flex h-10 w-10 items-center justify-center"
-              style={{ backgroundColor: "#84f57c" }}
+              style={{ backgroundColor: "#8b5cf6" }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -164,7 +164,7 @@ export function Footer() {
             <a 
               href="#" 
               style={{ color: "#737373" }} 
-              className="transition-colors hover:text-[#84f57c]"
+              className="transition-colors hover:text-[#8b5cf6]"
               aria-label="Twitter"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -174,7 +174,7 @@ export function Footer() {
             <a 
               href="#" 
               style={{ color: "#737373" }} 
-              className="transition-colors hover:text-[#84f57c]"
+              className="transition-colors hover:text-[#8b5cf6]"
               aria-label="GitHub"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -184,7 +184,7 @@ export function Footer() {
             <a 
               href="#" 
               style={{ color: "#737373" }} 
-              className="transition-colors hover:text-[#84f57c]"
+              className="transition-colors hover:text-[#8b5cf6]"
               aria-label="LinkedIn"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

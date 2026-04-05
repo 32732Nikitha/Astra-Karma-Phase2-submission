@@ -17,14 +17,14 @@
   --secondary-foreground: #ffffff;
   --muted: #262626;
   --muted-foreground: #737373;
-  --accent: #84f57c;
+  --accent: #8b5cf6;
   --accent-foreground: #0a0a0a;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
   --border: rgba(255, 255, 255, 0.1);
   --input: #1a1a1a;
-  --ring: #84f57c;
-  --chart-1: #84f57c;
+  --ring: #8b5cf6;
+  --chart-1: #8b5cf6;
   --chart-2: #22d3ee;
   --chart-3: #ef4444;
   --chart-4: #a855f7;
@@ -32,15 +32,15 @@
   --radius: 0rem;
   --sidebar: #0a0a0a;
   --sidebar-foreground: #ffffff;
-  --sidebar-primary: #84f57c;
+  --sidebar-primary: #8b5cf6;
   --sidebar-primary-foreground: #0a0a0a;
   --sidebar-accent: #1a1a1a;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: #84f57c;
+  --sidebar-ring: #8b5cf6;
   
   /* Scrollvibe Neon tokens */
-  --neon: #84f57c;
+  --neon: #8b5cf6;
   --neon-glow: rgba(132, 245, 124, 0.5);
   --charcoal: #1a1a1a;
   --pitch: #0a0a0a;
@@ -59,26 +59,26 @@
   --secondary-foreground: #ffffff;
   --muted: #262626;
   --muted-foreground: #737373;
-  --accent: #84f57c;
+  --accent: #8b5cf6;
   --accent-foreground: #0a0a0a;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
   --border: rgba(255, 255, 255, 0.1);
   --input: #1a1a1a;
-  --ring: #84f57c;
-  --chart-1: #84f57c;
+  --ring: #8b5cf6;
+  --chart-1: #8b5cf6;
   --chart-2: #22d3ee;
   --chart-3: #ef4444;
   --chart-4: #a855f7;
   --chart-5: #f59e0b;
   --sidebar: #0a0a0a;
   --sidebar-foreground: #ffffff;
-  --sidebar-primary: #84f57c;
+  --sidebar-primary: #8b5cf6;
   --sidebar-primary-foreground: #0a0a0a;
   --sidebar-accent: #1a1a1a;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: #84f57c;
+  --sidebar-ring: #8b5cf6;
 }
 
 @theme inline {
@@ -157,7 +157,7 @@
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #84f57c;
+    background: #8b5cf6;
   }
 }
 
@@ -174,7 +174,7 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 24px;
   height: 24px;
-  background: #84f57c;
+  background: #8b5cf6;
   cursor: pointer;
   border-radius: 0;
   box-shadow: 0 0 20px rgba(132, 245, 124, 0.5);
@@ -188,7 +188,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
 input[type="range"]::-moz-range-thumb {
   width: 24px;
   height: 24px;
-  background: #84f57c;
+  background: #8b5cf6;
   cursor: pointer;
   border-radius: 0;
   border: none;

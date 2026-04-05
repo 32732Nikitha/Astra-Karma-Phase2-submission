@@ -17,21 +17,21 @@ export default function BhimaAstraPage() {
   <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
     <Link
       href="/admin/login"
-      className={`${portalBtn} bg-[#84f57c]/60 text-black hover:bg-[#8be375] shadow-[0_0_10px_rgba(156,237,134,0.5)] hover:shadow-[0_0_20px_rgba(156,237,134,0.7)]`}
+      className={`${portalBtn} bg-[#8b5cf6]/80 text-black hover:bg-[#8be375] shadow-[0_0_10px_rgba(156,237,134,0.5)] hover:shadow-[0_0_20px_rgba(156,237,134,0.7)]`}
     >
       Admin
     </Link>
 
     <Link
       href="/manager"
-      className={`${portalBtn} bg-[#84f57c]/60 text-black hover:bg-[#8be375] shadow-[0_0_10px_rgba(156,237,134,0.5)] hover:shadow-[0_0_20px_rgba(156,237,134,0.7)]`}
+      className={`${portalBtn} bg-[#8b5cf6]/80 text-black hover:bg-[#8be375] shadow-[0_0_10px_rgba(156,237,134,0.5)] hover:shadow-[0_0_20px_rgba(156,237,134,0.7)]`}
     >
       Manager
     </Link>
 
     <Link
       href="/worker/login"
-      className={`${portalBtn} bg-[#84f57c]/60 text-black hover:bg-[#8be375] shadow-[0_0_10px_rgba(156,237,134,0.5)] hover:shadow-[0_0_20px_rgba(156,237,134,0.7)]`}
+      className={`${portalBtn} bg-[#8b5cf6]/80 text-black hover:bg-[#8be375] shadow-[0_0_10px_rgba(156,237,134,0.5)] hover:shadow-[0_0_20px_rgba(156,237,134,0.7)]`}
     >
       Worker
     </Link>

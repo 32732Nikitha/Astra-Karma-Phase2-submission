@@ -11,7 +11,7 @@ const pipelineStages = [
     stats: ["2.3ms", "10K+ Rules", "99.2% Precision"],
     bgColor: "#0a0a0a",
     textColor: "#ffffff",
-    accentColor: "#84f57c",
+    accentColor: "#8b5cf6",
     borderColor: "rgba(132, 245, 124, 0.3)",
   },
   {
@@ -19,7 +19,7 @@ const pipelineStages = [
     title: "BEHAVIOR ML",
     description: "Deep learning models analyze user behavior patterns. Keystroke dynamics, navigation flows, session biometrics.",
     stats: ["15ms", "Neural Net", "97.8% Recall"],
-    bgColor: "#84f57c",
+    bgColor: "#8b5cf6",
     textColor: "#0a0a0a",
     accentColor: "#0a0a0a",
     borderColor: "rgba(10, 10, 10, 0.3)",
@@ -31,7 +31,7 @@ const pipelineStages = [
     stats: ["45ms", "Graph DB", "6.2M Nodes"],
     bgColor: "#1a1a1a",
     textColor: "#ffffff",
-    accentColor: "#84f57c",
+    accentColor: "#8b5cf6",
     borderColor: "rgba(132, 245, 124, 0.3)",
   },
   {
@@ -258,7 +258,7 @@ export function FraudPipelineSection() {
           className="mb-16"
         >
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-xs font-mono tracking-widest" style={{ color: "#84f57c" }}>00.03</span>
+            <span className="text-xs font-mono tracking-widest" style={{ color: "#8b5cf6" }}>00.03</span>
             <div className="h-px w-16" style={{ backgroundColor: "rgba(255,255,255,0.1)" }} />
             <span className="text-xs font-mono uppercase tracking-widest" style={{ color: "#737373" }}>
               Fraud Pipeline
@@ -267,7 +267,7 @@ export function FraudPipelineSection() {
           <h2 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black uppercase tracking-tighter text-white leading-[0.9]">
             FOUR LAYERS
             <br />
-            <span style={{ color: "#84f57c" }}>ZERO ESCAPE</span>
+            <span style={{ color: "#8b5cf6" }}>ZERO ESCAPE</span>
           </h2>
           <p className="mt-6 text-lg max-w-xl" style={{ color: "#737373" }}>
             Every transaction passes through our multi-stage fraud detection pipeline. 

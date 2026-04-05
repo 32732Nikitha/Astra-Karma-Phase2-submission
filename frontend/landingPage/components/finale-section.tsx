@@ -83,7 +83,7 @@ export function FinaleSection() {
           transition={{ duration: 0.6 }}
         >
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-xs font-mono tracking-widest" style={{ color: "#84f57c" }}>00.05</span>
+            <span className="text-xs font-mono tracking-widest" style={{ color: "#8b5cf6" }}>00.05</span>
             <div className="h-px w-16" style={{ backgroundColor: "rgba(255,255,255,0.1)" }} />
             <span className="text-xs font-mono uppercase tracking-widest" style={{ color: "#737373" }}>
               The Finale
@@ -94,17 +94,17 @@ export function FinaleSection() {
 
       {/* Giant Typography with Bouncing Animation */}
       <div className="mx-auto max-w-7xl px-6 lg:px-20 mb-24">
-        <h2 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[11rem] font-black uppercase leading-[0.85] tracking-tighter text-white text-center">
+        <h2 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] font-black uppercase leading-[0.85] tracking-tighter text-white text-center">
           <BouncingText text="IT SHOULD" />
           <br />
-          <span style={{ color: "#84f57c" }}>
+          <span style={{ color: "#8b5cf6" }}>
             <BouncingText text="KNOW." />
           </span>
         </h2>
-        <h2 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[11rem] font-black uppercase leading-[0.85] tracking-tighter text-white text-center mt-4">
+        <h2 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] font-black uppercase leading-[0.85] tracking-tighter text-white text-center mt-4">
           <BouncingText text="BHIMA ASTRA" />
           <br />
-          <span style={{ color: "#84f57c" }}>
+          <span style={{ color: "#8b5cf6" }}>
             <BouncingText text="DOES." />
           </span>
         </h2>
@@ -121,7 +121,7 @@ export function FinaleSection() {
               key={`row1-${index}`}
               className="flex items-center gap-4 px-8 py-4 rounded-full shrink-0"
               style={{
-                backgroundColor: stat.variant === "neon" ? "#84f57c" : "#1a1a1a",
+                backgroundColor: stat.variant === "neon" ? "#8b5cf6" : "#1a1a1a",
                 color: stat.variant === "neon" ? "#0a0a0a" : "#ffffff",
                 border: stat.variant === "neon" ? "none" : "1px solid rgba(255,255,255,0.1)",
               }}
@@ -146,7 +146,7 @@ export function FinaleSection() {
               key={`row2-${index}`}
               className="flex items-center gap-4 px-8 py-4 rounded-full shrink-0"
               style={{
-                backgroundColor: stat.variant === "dark" ? "#84f57c" : "#1a1a1a",
+                backgroundColor: stat.variant === "dark" ? "#8b5cf6" : "#1a1a1a",
                 color: stat.variant === "dark" ? "#0a0a0a" : "#ffffff",
                 border: stat.variant === "dark" ? "none" : "1px solid rgba(255,255,255,0.1)",
               }}
@@ -176,7 +176,7 @@ export function FinaleSection() {
           <div className="flex flex-wrap justify-center gap-4">
             <motion.button 
               className="group relative px-12 py-5 font-bold uppercase tracking-wider text-sm overflow-hidden"
-              style={{ backgroundColor: "#84f57c", color: "#0a0a0a" }}
+              style={{ backgroundColor: "#8b5cf6", color: "#0a0a0a" }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -189,7 +189,7 @@ export function FinaleSection() {
               />
             </motion.button>
             <motion.button 
-              className="px-12 py-5 font-bold uppercase tracking-wider text-sm text-white transition-colors duration-300 hover:border-[#84f57c] hover:text-[#84f57c]"
+              className="px-12 py-5 font-bold uppercase tracking-wider text-sm text-white transition-colors duration-300 hover:border-[#8b5cf6] hover:text-[#8b5cf6]"
               style={{ border: "1px solid rgba(255,255,255,0.2)" }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

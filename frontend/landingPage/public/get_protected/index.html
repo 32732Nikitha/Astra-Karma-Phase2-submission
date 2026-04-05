@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhima Astra — AI Parametric Insurance Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/nuvia.css" />
+</head>
+<body>
+
+  <!-- ── NAV ────────────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-mark">⬡</span>
+        <div>
+          <div class="logo-name">BHIMA ASTRA<sup>®</sup></div>
+          <div class="logo-tagline">Parametric Intelligence</div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#oracle">Oracle</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#behavioral">Behavioral</a>
+        <a href="#terminal">Terminal</a>
+      </div>
+      <div class="nav-right">
+        <div class="sys-clock" id="sys-clock">—</div>
+        <div class="nav-badge" id="nav-badge">● ACTIVE</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ───────────────────────────────────────────── -->
+  <section class="hero" id="home">
+    <div class="hero-eyebrow">AI-Powered Risk Assessment</div>
+    <h1 class="hero-title">Astra<br><em>Thinks.</em></h1>
+    <p class="hero-sub">Real-time parametric insurance & fraud detection.<br>Watch the pipeline make decisions — live.</p>
+    <div class="hero-cta-row">
+      <button class="btn-primary" id="run-btn" onclick="runSimulation()">
+        <span class="btn-icon">▶</span> Run Simulation
+      </button>
+      <button class="btn-ghost" onclick="resetAll()">Reset</button>
+      <select class="worker-sel" id="worker-select" onchange="onWorkerChange(this.value)">
+        <option value="0">W-0001 · Ajay Mishra</option>
+        <option value="1">W-0002 · Pooja Sharma</option>
+        <option value="2">W-0003 · Sarla Tripathi</option>
+        <option value="3">W-0004 · Srikanth Sharma</option>
+        <option value="4">W-SYNTH · Synthetic Trace</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- ── HERO STATS ──────────────────────────────────────── -->
+  <section class="stats-band">
+    <div class="stats-grid">
+
+      <!-- 1. System Status -->
+      <div class="stat-card" id="card-status">
+        <div class="stat-label">System Status</div>
+        <div class="stat-status-row">
+          <span class="pulse-dot" id="status-dot"></span>
+          <span class="stat-value-lg" id="status-text" style="color:var(--sage)">ACTIVE</span>
+        </div>
+        <div class="stat-meta" id="status-sub">All Oracle nodes operational</div>
+        <div class="stat-row-pair">
+          <span class="pair-label">UPTIME</span><span class="pair-val">99.8%</span>
+          <span class="pair-label">LATENCY</span><span class="pair-val" id="latency-val">12ms</span>
+        </div>
+      </div>
+
+      <!-- 2. Oracle Nodes -->
+      <div class="stat-card">
+        <div class="stat-label">Active Oracle Nodes</div>
+        <div class="stat-value-xl" id="node-count">24</div>
+        <div class="stat-meta">Environmental + fraud nodes</div>
+        <div class="mini-bar-wrap">
+          <div class="mini-bar-fill" id="node-bar" style="width:80%"></div>
+        </div>
+      </div>
+
+      <!-- 3. Verified Payouts -->
+      <div class="stat-card">
+        <div class="stat-label">Total Verified Payouts</div>
+        <div class="stat-value-xl payout-green" id="payout-total">₹4,82,350</div>
+        <div class="stat-meta">Across <span id="payout-count">847</span> approved claims</div>
+        <div class="stat-trend">
+          <span class="trend-up">↑ 12.4%</span> vs last cycle
+        </div>
+      </div>
+
+      <!-- 4. Risk Level -->
+      <div class="stat-card" id="card-risk">
+        <div class="stat-label">Current Risk Level</div>
+        <div class="stat-value-xl" id="risk-text" style="color:var(--sage)">LOW</div>
+        <div class="risk-bar-wrap">
+          <div class="risk-bar-track">
+            <div class="risk-cursor" id="risk-cursor" style="left:12%"></div>
+          </div>
+          <div class="risk-labels">
+            <span>LOW</span><span>MED</span><span>HIGH</span><span>CRIT</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PIPELINE FLOW ───────────────────────────────────── -->
+  <section class="pipeline-section" id="pipeline">
+    <div class="section-eyebrow">Processing Stages</div>
+    <div class="pipeline-strip">
+      <div class="pipe-stage" id="pipe-0">
+        <div class="pipe-num">01</div>
+        <div class="pipe-body">
+          <div class="pipe-name">Oracle Phase</div>
+          <div class="pipe-file">disruption.csv</div>
+        </div>
+        <div class="pipe-arrow">→</div>
+      </div>
+      <div class="pipe-stage" id="pipe-1">
+        <div class="pipe-num">02</div>
+        <div class="pipe-body">
+          <div class="pipe-name">Rule Engine</div>
+          <div class="pipe-file">fraud_rules.py</div>
+        </div>
+        <div class="pipe-arrow">→</div>
+      </div>
+      <div class="pipe-stage" id="pipe-2">
+        <div class="pipe-num">03</div>
+        <div class="pipe-body">
+          <div class="pipe-name">Behavior Model</div>
+          <div class="pipe-file">behavior_model.py</div>
+        </div>
+        <div class="pipe-arrow">→</div>
+      </div>
+      <div class="pipe-stage" id="pipe-3">
+        <div class="pipe-num">04</div>
+        <div class="pipe-body">
+          <div class="pipe-name">Decision Engine</div>
+          <div class="pipe-file">decision_engine.py</div>
+        </div>
+        <div class="pipe-arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WORKER + RULES ──────────────────────────────────── -->
+  <section class="worker-section">
+    <div class="worker-grid">
+      <!-- Worker Card -->
+      <div class="nuvia-card" id="worker-card">
+        <div class="card-eyebrow">Worker Profile</div>
+        <div class="worker-name-row">
+          <div class="worker-avatar" id="w-avatar">AM</div>
+          <div>
+            <div class="worker-name" id="w-name">Ajay Mishra</div>
+            <div class="worker-id" id="w-meta">W-0001 · Swiggy Instamart · Delhi</div>
+          </div>
+          <span class="synthetic-badge" id="syn-badge" style="display:none">SYNTHETIC</span>
+        </div>
+        <div class="worker-tags" id="w-tags">
+          <span class="tag">Bike Delivery</span>
+          <span class="tag">Full-time</span>
+          <span class="tag warn">KYC: Unverified</span>
+          <span class="tag">Risk: 0.3451</span>
+        </div>
+        <div class="worker-features" id="w-features">
+          <div class="feat-row"><span class="feat-k">GPS Delta</span><span class="feat-v" id="f-gps">63.5m</span></div>
+          <div class="feat-row"><span class="feat-k">Accel Variance</span><span class="feat-v" id="f-accel">12.7</span></div>
+          <div class="feat-row"><span class="feat-k">Claim Response</span><span class="feat-v" id="f-resp">282s</span></div>
+          <div class="feat-row"><span class="feat-k">App Interactions</span><span class="feat-v" id="f-inter">37</span></div>
+          <div class="feat-row"><span class="feat-k">Location Jump</span><span class="feat-v" id="f-jump">No</span></div>
+        </div>
+      </div>
+
+      <!-- Rules Card -->
+      <div class="nuvia-card" id="card-rules">
+        <div class="card-eyebrow">Stage 1 — Rule Engine</div>
+        <div class="rule-decision" id="rule-decision">— Awaiting Simulation —</div>
+        <div class="rule-flags" id="rule-flags">
+          <div class="flag-chip" data-flag="gps_mismatch">GPS Mismatch</div>
+          <div class="flag-chip" data-flag="no_motion">No Motion</div>
+          <div class="flag-chip" data-flag="timing_anomaly">Timing Anomaly</div>
+          <div class="flag-chip" data-flag="device_blacklist">Device Blacklist</div>
+        </div>
+        <div class="rule-score-wrap">
+          <span class="feat-k">Rule Score</span>
+          <div class="rule-score-bar-wrap">
+            <div class="rule-score-bar" id="rule-score-bar" style="width:0%"></div>
+          </div>
+          <span class="feat-v" id="rule-score-val">0/4</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ORACLE + TERMINAL + BEHAVIORAL ─────────────────── -->
+  <section class="sim-core" id="oracle">
+    <div class="sim-three-col">
+
+      <!-- LEFT: Environmental Oracle -->
+      <div class="nuvia-card" id="oracle-card">
+        <div class="card-eyebrow">Environmental Oracle</div>
+        <div class="oracle-event-label" id="oracle-event-label">No event loaded</div>
+
+        <div class="oracle-gauges">
+          <!-- Rainfall -->
+          <div class="gauge-item">
+            <div class="gauge-ring-wrap">
+              <svg viewBox="0 0 60 60">
+                <circle cx="30" cy="30" r="24" fill="none" stroke="var(--border)" stroke-width="5"/>
+                <circle id="g-rain-c" cx="30" cy="30" r="24" fill="none"
+                  stroke="var(--sage)" stroke-width="5"
+                  stroke-dasharray="0 150.8" stroke-linecap="round"
+                  transform="rotate(-90 30 30)" style="transition:stroke-dasharray 1.2s cubic-bezier(.4,0,.2,1)"/>
+              </svg>
+              <div class="gauge-val" id="g-rain-val">0%</div>
+            </div>
+            <div class="gauge-info">
+              <div class="gauge-title">Rainfall</div>
+              <div class="gauge-detail" id="rain-detail">0.0 mm · Clear</div>
+              <div class="gauge-threshold">Trigger &gt; 45mm</div>
+            </div>
+          </div>
+          <!-- AQI -->
+          <div class="gauge-item">
+            <div class="gauge-ring-wrap">
+              <svg viewBox="0 0 60 60">
+                <circle cx="30" cy="30" r="24" fill="none" stroke="var(--border)" stroke-width="5"/>
+                <circle id="g-aqi-c" cx="30" cy="30" r="24" fill="none"
+                  stroke="var(--sage)" stroke-width="5"
+                  stroke-dasharray="0 150.8" stroke-linecap="round"
+                  transform="rotate(-90 30 30)" style="transition:stroke-dasharray 1.2s cubic-bezier(.4,0,.2,1)"/>
+              </svg>
+              <div class="gauge-val" id="g-aqi-val">0%</div>
+            </div>
+            <div class="gauge-info">
+              <div class="gauge-title">Air Quality (AQI)</div>
+              <div class="gauge-detail" id="aqi-detail">0 · Good</div>
+              <div class="gauge-threshold">Trigger &gt; 300</div>
+            </div>
+          </div>
+          <!-- Traffic -->
+          <div class="gauge-item">
+            <div class="gauge-ring-wrap">
+              <svg viewBox="0 0 60 60">
+                <circle cx="30" cy="30" r="24" fill="none" stroke="var(--border)" stroke-width="5"/>
+                <circle id="g-traf-c" cx="30" cy="30" r="24" fill="none"
+                  stroke="var(--sage)" stroke-width="5"
+                  stroke-dasharray="0 150.8" stroke-linecap="round"
+                  transform="rotate(-90 30 30)" style="transition:stroke-dasharray 1.2s cubic-bezier(.4,0,.2,1)"/>
+              </svg>
+              <div class="gauge-val" id="g-traf-val">0%</div>
+            </div>
+            <div class="gauge-info">
+              <div class="gauge-title">Traffic Index</div>
+              <div class="gauge-detail" id="traf-detail">0.0 · Free flow</div>
+              <div class="gauge-threshold">Trigger &gt; 75</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Composite -->
+        <div class="composite-block">
+          <div class="composite-label-row">
+            <span class="feat-k">Composite Disruption Score</span>
+            <span class="feat-v sage" id="composite-val">0.000</span>
+          </div>
+          <div class="composite-track">
+            <div class="composite-fill" id="composite-bar" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENTER: Thinking Terminal -->
+      <div class="terminal-card" id="terminal">
+        <div class="terminal-topbar">
+          <div class="term-dots">
+            <span class="tdot red"></span>
+            <span class="tdot amber"></span>
+            <span class="tdot green"></span>
+          </div>
+          <span class="term-title">ASTRA THINKING TERMINAL</span>
+          <span class="term-event-id" id="term-event-id">EVENT: —</span>
+        </div>
+        <div class="term-body" id="term-body">
+          <div class="log-line init">
+            <span class="log-ts">00:00:00</span>
+            <span class="log-sub sys">[SYSTEM]</span>
+            <span class="log-msg">Bhima Astra initialized. All subsystems nominal.</span>
+          </div>
+          <div class="log-line init">
+            <span class="log-ts">00:00:01</span>
+            <span class="log-sub sys">[SYSTEM]</span>
+            <span class="log-msg">Select a worker profile and press Run Simulation.<span class="cursor-blink"></span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Behavioral Blueprint -->
+      <div class="nuvia-card" id="behavioral">
+        <div class="card-eyebrow">Behavioral Blueprint</div>
+        <div class="behavior-score-wrap">
+          <div class="behavior-score-val" id="bscore-val">0.00</div>
+          <div class="behavior-score-meta">
+            <div class="behavior-score-label">Pattern Anomaly Score</div>
+            <div class="behavior-score-tag" id="bscore-tag">AWAITING</div>
+          </div>
+        </div>
+
+        <!-- Sparkline -->
+        <div class="sparkline-label">Motion Variance</div>
+        <div class="sparkline-wrap">
+          <svg id="sparkline-svg" viewBox="0 0 240 60" preserveAspectRatio="none" style="width:100%;height:60px">
+            <path id="spark-path" d="M0 30 L240 30" fill="none" stroke="var(--border-dark)" stroke-width="1.5"/>
+            <path id="spark-fill" d="M0 30 L240 30 L240 60 L0 60 Z" fill="rgba(124,58,237,0.08)"/>
+          </svg>
+        </div>
+
+        <!-- Component bars -->
+        <div class="components-label">Signal Components</div>
+        <div class="comp-bars">
+          <div class="comp-row">
+            <span class="comp-name">GPS Delta</span>
+            <div class="comp-track"><div class="comp-fill sage" id="bar-gps" style="width:0%"></div></div>
+            <span class="comp-pct" id="pct-gps">0%</span>
+          </div>
+          <div class="comp-row">
+            <span class="comp-name">Motion</span>
+            <div class="comp-track"><div class="comp-fill amber" id="bar-motion" style="width:0%"></div></div>
+            <span class="comp-pct" id="pct-motion">0%</span>
+          </div>
+          <div class="comp-row">
+            <span class="comp-name">Interaction</span>
+            <div class="comp-track"><div class="comp-fill clay" id="bar-interact" style="width:0%"></div></div>
+            <span class="comp-pct" id="pct-interact">0%</span>
+          </div>
+          <div class="comp-row">
+            <span class="comp-name">Loc Jump</span>
+            <div class="comp-track"><div class="comp-fill red" id="bar-jump" style="width:0%"></div></div>
+            <span class="comp-pct" id="pct-jump">0%</span>
+          </div>
+        </div>
+
+        <!-- GPS Status -->
+        <div class="gps-status-block" id="gps-block">
+          <div>
+            <div class="feat-k">GPS Integrity</div>
+            <div class="gps-delta-val" id="gps-delta-val">Delta: — m</div>
+          </div>
+          <div class="gps-badge ok" id="gps-badge">NOMINAL</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MODAL ───────────────────────────────────────────── -->
+  <div class="modal-overlay" id="modal-overlay" onclick="if(event.target===this)closeModal()">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-eyebrow">Stage 4 — Astra Decision Engine</div>
+        <button class="modal-close-btn" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-body">
+
+        <!-- Decision Badge + Primary Reason -->
+        <div class="modal-verdict-row">
+          <div class="verdict-badge" id="verdict-badge">● APPROVE</div>
+          <div>
+            <div class="verdict-reason" id="verdict-reason">Normal Behavior</div>
+            <div class="verdict-sub" id="verdict-sub">No anomalies detected across all pipeline stages</div>
+          </div>
+        </div>
+
+        <!-- Score Grid -->
+        <div class="modal-score-grid">
+          <div class="mscore-cell">
+            <div class="mscore-label">Final Score</div>
+            <div class="mscore-val" id="m-final">0.000</div>
+          </div>
+          <div class="mscore-cell">
+            <div class="mscore-label">Percentile</div>
+            <div class="mscore-val" id="m-pct">P00</div>
+          </div>
+          <div class="mscore-cell">
+            <div class="mscore-label">Behavior Score</div>
+            <div class="mscore-val" id="m-bscore">0.000</div>
+          </div>
+          <div class="mscore-cell">
+            <div class="mscore-label">Rule Flags</div>
+            <div class="mscore-val" id="m-rules">0 / 4</div>
+          </div>
+        </div>
+
+        <!-- Payout Row -->
+        <div class="modal-payout-row">
+          <div>
+            <div class="modal-payout-label">Payout Decision</div>
+            <div class="modal-payout-val" id="m-payout">—</div>
+          </div>
+          <div style="text-align:right">
+            <div class="modal-payout-label">Worker</div>
+            <div class="modal-payout-val" id="m-worker">—</div>
+          </div>
+        </div>
+
+        <!-- XGBoost Feature Importance -->
+        <div class="feat-importance-wrap">
+          <div class="feat-importance-title">XGBoost Feature Importance</div>
+          <div id="feat-rows"></div>
+        </div>
+
+        <!-- All Reasons -->
+        <div class="all-reasons-wrap" id="all-reasons-wrap"></div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn-primary" onclick="closeModal()">Acknowledge &amp; Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ──────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">BHIMA ASTRA<sup>®</sup></div>
+      <div class="footer-meta">Parametric Intelligence Platform · v2.4.1-ASTRA · IST</div>
+      <div class="footer-right">
+        <span>fraud_rules.py</span>
+        <span>behavior_model.py</span>
+        <span>decision_engine.py</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/data.js"></script>
+  <script src="src/engine.js"></script>
+  <script src="src/ui.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>

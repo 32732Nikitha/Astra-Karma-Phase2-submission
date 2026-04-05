@@ -216,7 +216,7 @@ export function SimulationSection() {
       ctx.arc(domeX, domeY, domeRadius, Math.PI, 0)
       ctx.strokeStyle = `rgba(132, 245, 124, ${0.7 + intensity * 0.3})`
       ctx.lineWidth = 5
-      ctx.shadowColor = "#84f57c"
+      ctx.shadowColor = "#8b5cf6"
       ctx.shadowBlur = 30
       ctx.stroke()
       ctx.shadowBlur = 0
@@ -318,7 +318,7 @@ export function SimulationSection() {
             vy: -Math.random() * 14 - 8,
             rotation: Math.random() * Math.PI * 2,
             rotationSpeed: (Math.random() - 0.5) * 0.35,
-            color: ["#84f57c", "#22d3ee", "#ffffff"][Math.floor(Math.random() * 3)],
+            color: ["#8b5cf6", "#22d3ee", "#ffffff"][Math.floor(Math.random() * 3)],
           })
         }
       }
@@ -365,7 +365,7 @@ export function SimulationSection() {
           className="mb-16"
         >
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-xs font-mono tracking-widest" style={{ color: "#84f57c" }}>00.02</span>
+            <span className="text-xs font-mono tracking-widest" style={{ color: "#8b5cf6" }}>00.02</span>
             <div className="h-px w-16" style={{ backgroundColor: "rgba(255,255,255,0.1)" }} />
             <span className="text-xs font-mono uppercase tracking-widest" style={{ color: "#737373" }}>
               The Simulation
@@ -374,7 +374,7 @@ export function SimulationSection() {
           <h2 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black uppercase tracking-tighter text-white leading-[0.9]">
             CHAOS VS
             <br />
-            <span style={{ color: "#84f57c" }}>PROTECTION</span>
+            <span style={{ color: "#8b5cf6" }}>PROTECTION</span>
           </h2>
         </motion.div>
 
@@ -401,7 +401,7 @@ export function SimulationSection() {
                   className="px-4 py-1 text-sm font-bold font-mono"
                   style={{ 
                     backgroundColor: rainfall > 100 ? "rgba(239,68,68,0.2)" : "rgba(132,245,124,0.15)", 
-                    color: rainfall > 100 ? "#ef4444" : "#84f57c" 
+                    color: rainfall > 100 ? "#ef4444" : "#8b5cf6" 
                   }}
                 >
                   {rainfall}MM
@@ -413,9 +413,9 @@ export function SimulationSection() {
                 max="150"
                 value={rainfall}
                 onChange={(e) => setRainfall(Number(e.target.value))}
-                className="h-2 w-full cursor-pointer appearance-none [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:bg-[#84f57c] [&::-webkit-slider-thumb]:transition-all hover:[&::-webkit-slider-thumb]:scale-110"
+                className="h-2 w-full cursor-pointer appearance-none [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:bg-[#8b5cf6] [&::-webkit-slider-thumb]:transition-all hover:[&::-webkit-slider-thumb]:scale-110"
                 style={{
-                  background: `linear-gradient(to right, ${rainfall > 100 ? '#ef4444' : '#84f57c'} ${(rainfall / 150) * 100}%, #262626 ${(rainfall / 150) * 100}%)`,
+                  background: `linear-gradient(to right, ${rainfall > 100 ? '#ef4444' : '#8b5cf6'} ${(rainfall / 150) * 100}%, #262626 ${(rainfall / 150) * 100}%)`,
                 }}
               />
               <div className="flex w-full justify-between text-xs font-mono uppercase" style={{ color: "#737373" }}>
@@ -486,7 +486,7 @@ export function SimulationSection() {
               <div className="flex flex-1 flex-col items-center justify-between py-8 px-4">
                 <div 
                   className="px-4 py-2 text-xs font-mono uppercase tracking-wider font-bold"
-                  style={{ backgroundColor: "rgba(132,245,124,0.2)", color: "#84f57c" }}
+                  style={{ backgroundColor: "rgba(132,245,124,0.2)", color: "#8b5cf6" }}
                 >
                   Protected
                 </div>
@@ -504,7 +504,7 @@ export function SimulationSection() {
                   </div>
                   <div className="text-center">
                     <p className="font-bold text-white uppercase tracking-wide text-sm">Vikram R.</p>
-                    <p className="text-xs font-mono" style={{ color: "#84f57c" }}>BHIMA PROTECTED</p>
+                    <p className="text-xs font-mono" style={{ color: "#8b5cf6" }}>BHIMA PROTECTED</p>
                   </div>
                 </div>
                 <AnimatePresence>
@@ -518,13 +518,13 @@ export function SimulationSection() {
                     >
                       <motion.p
                         className="text-3xl font-black"
-                        style={{ color: "#84f57c", textShadow: "0 0 25px rgba(132,245,124,0.6)" }}
+                        style={{ color: "#8b5cf6", textShadow: "0 0 25px rgba(132,245,124,0.6)" }}
                         animate={{ scale: [1, 1.08, 1] }}
                         transition={{ duration: 0.4 }}
                       >
                         ₹{payoutAmount.toLocaleString()}
                       </motion.p>
-                      <p className="text-xs font-mono uppercase" style={{ color: "#84f57c" }}>
+                      <p className="text-xs font-mono uppercase" style={{ color: "#8b5cf6" }}>
                         Instant Payout!
                       </p>
                     </motion.div>

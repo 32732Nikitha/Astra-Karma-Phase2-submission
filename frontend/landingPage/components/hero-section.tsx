@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef } from "react"
+import Link from "next/link"
 import { motion, useScroll, useTransform } from "framer-motion"
 
 const letterVariants = {
@@ -85,6 +86,13 @@ export function HeroSection() {
         />
       </motion.div>
 
+      {/* Logo */}
+      <div className="absolute top-0 left-0 z-20 p-6 md:p-12">
+        <h2 className="text-xl md:text-2xl font-black uppercase tracking-widest text-white">
+          Bhima Astra
+        </h2>
+      </div>
+
       {/* Content */}
       <div className="sticky top-0 h-screen flex flex-col justify-center">
         <motion.div
@@ -98,7 +106,7 @@ export function HeroSection() {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="flex items-center gap-4 mb-8"
           >
-            <span className="text-xs font-mono tracking-widest" style={{ color: "#84f57c" }}>00.01</span>
+            <span className="text-xs font-mono tracking-widest" style={{ color: "#8b5cf6" }}>00.01</span>
             <div className="h-px w-16" style={{ backgroundColor: "rgba(255,255,255,0.1)" }} />
             <span className="text-xs font-mono uppercase tracking-widest" style={{ color: "#737373" }}>
               The Hook
@@ -111,7 +119,7 @@ export function HeroSection() {
             <br />
             <AnimatedText text="WHEN INCOME" />
             <br />
-            <span style={{ color: "#84f57c" }}>
+            <span style={{ color: "#8b5cf6" }}>
               <AnimatedText text="DROPS IN" />
             </span>
             <br />
@@ -137,19 +145,23 @@ export function HeroSection() {
             transition={{ delay: 1.8, duration: 0.6 }}
             className="mt-12 flex items-center gap-6"
           >
-            <button 
-              className="group relative px-8 py-4 font-bold uppercase tracking-wider text-sm overflow-hidden"
-              style={{ backgroundColor: "#84f57c", color: "#0a0a0a" }}
-            >
-              <span className="relative z-10">Get Protected</span>
-              <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            </button>
-            <button 
-              className="px-8 py-4 border font-medium uppercase tracking-wider text-sm text-white hover:text-[#84f57c] hover:border-[#84f57c] transition-colors duration-300"
-              style={{ borderColor: "rgba(255,255,255,0.2)" }}
-            >
-              Learn More
-            </button>
+            <Link href="/get_protected">
+              <button 
+                className="group relative px-8 py-4 font-bold uppercase tracking-wider text-sm overflow-hidden"
+                style={{ backgroundColor: "#8b5cf6", color: "#0a0a0a" }}
+              >
+                <span className="relative z-10">Learn More</span>
+                <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              </button>
+            </Link>
+            {/* <Link href="/get_protected">
+              <button 
+                className="px-8 py-4 border font-medium uppercase tracking-wider text-sm text-white hover:text-[#8b5cf6] hover:border-[#8b5cf6] transition-colors duration-300"
+                style={{ borderColor: "rgba(255,255,255,0.2)" }}
+              >
+                Learn More
+              </button>
+            </Link> */}
           </motion.div>
         </motion.div>
 

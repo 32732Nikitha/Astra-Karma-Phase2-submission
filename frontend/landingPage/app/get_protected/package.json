@@ -1,0 +1,13 @@
+{
+  "name": "bhima_astra",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bhima Astra — AI Parametric Insurance Simulator",
+  "scripts": {
+    "start": "serve bhima_astra",
+    "dev": "serve bhima_astra"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

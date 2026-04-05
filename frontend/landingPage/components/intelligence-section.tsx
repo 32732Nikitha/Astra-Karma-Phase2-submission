@@ -228,7 +228,7 @@ export function IntelligenceSection() {
           className="mb-16"
         >
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-xs font-mono tracking-widest" style={{ color: "#84f57c" }}>00.04</span>
+            <span className="text-xs font-mono tracking-widest" style={{ color: "#8b5cf6" }}>00.04</span>
             <div className="h-px w-16" style={{ backgroundColor: "rgba(255,255,255,0.1)" }} />
             <span className="text-xs font-mono uppercase tracking-widest" style={{ color: "#737373" }}>
               The Intelligence
@@ -237,7 +237,7 @@ export function IntelligenceSection() {
           <h2 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-black uppercase tracking-tighter text-white leading-[0.9]">
             BE THE
             <br />
-            <span style={{ color: "#84f57c" }}>SYSTEM</span>
+            <span style={{ color: "#8b5cf6" }}>SYSTEM</span>
           </h2>
           <p className="mt-6 text-lg max-w-xl leading-relaxed" style={{ color: "#737373" }}>
             Click any decision button. Watch how our AI detects coordinated fraud rings 
@@ -382,7 +382,7 @@ export function IntelligenceSection() {
                     {snappingPhase ? "ANALYZING PATTERN..." : "Transaction Network"}
                   </p>
                   <p className="text-2xl font-black text-white">
-                    50 <span style={{ color: snappingPhase ? "#ef4444" : "#84f57c" }}>
+                    50 <span style={{ color: snappingPhase ? "#ef4444" : "#8b5cf6" }}>
                       {snappingPhase ? "SUSPICIOUS" : "ACTIVE"}
                     </span> NODES
                   </p>
@@ -407,7 +407,7 @@ export function IntelligenceSection() {
                 <motion.button
                   onClick={() => handleDecision("approve")}
                   className="px-10 py-4 font-bold uppercase tracking-wider text-sm transition-all"
-                  style={{ backgroundColor: "#84f57c", color: "#0a0a0a" }}
+                  style={{ backgroundColor: "#8b5cf6", color: "#0a0a0a" }}
                   whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(132,245,124,0.4)" }}
                   whileTap={{ scale: 0.95 }}
                 >
