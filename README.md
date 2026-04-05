@@ -2,14 +2,14 @@
 
 ## Intelligent Insurance Platform for Gig Economy Workers
 
-**A production-grade, full-stack insurance management system with AI-powered fraud detection, automated underwriting, and real-time risk analytics for the gig economy.**
+**A full-stack insurance management system with AI-powered fraud detection, configurable underwriting, and real-time risk analytics for the gig economy.**
 
 ### Executive Summary
 
 BHIMA ASTRA is an enterprise-grade insurance operations platform designed to address the unique challenges of insuring gig economy workers (delivery partners, ride-share drivers, logistics workers, etc.). The platform provides:
 
 - **Flexible Coverage Models**: Demand-driven, task-based, and annual policies with multiple tier support
-- **Intelligent Fraud Detection**: 4-stage machine learning pipeline with 95%+ recall on known fraud patterns
+- **Intelligent Fraud Detection**: 4-stage machine learning pipeline (rules, XGBoost, graph analysis, behavior detection) with configurable decision thresholds
 - **Automated Claims Workflow**: Rule-based underwriting engine with configurable approval thresholds and multi-stage reviews
 - **Location-Based Risk Management**: Geofencing, zone-based pricing, and incident correlation
 - **Real-Time Analytics**: Worker cohort analysis, loss ratio monitoring, claims prediction, and fraud trend detection
@@ -37,13 +37,51 @@ BHIMA ASTRA addresses these through:
 
 ---
 
+##  Implementation Status
+
+### ✅ Fully Implemented & Tested
+- ✅ OTP-based worker authentication (phone login)
+- ✅ Policy creation, renewal, cancellation, tier upgrades
+- ✅ Claim submission and tracking with audit trails
+- ✅ 4-stage fraud detection pipeline (rules → XGBoost → graph → behavior)
+- ✅ Loss ratio analytics and reporting
+- ✅ Zone risk assessment and visualization
+- ✅ Worker search and filtering (admin)
+- ✅ Fraud case management with investigation workflows
+- ✅ Claims approval/rejection workflows with audit logs
+- ✅ WebSocket real-time alerts for claim updates
+- ✅ Trigger simulation for testing zone alerts
+- ✅ Role-based access control (worker, admin, manager, analyst)
+- ✅ Income prediction model (Random Forest)
+- ✅ Disruption probability forecasting (XGBoost)
+- ✅ Dynamic premium calculation framework (Ridge Regression)
+- ✅ Payout history tracking
+- ✅ Event/disruption log (30-day history)
+- ✅ Multi-role dashboards (admin, worker, manager, landing page)
+
+### 🟡 Partially Implemented
+- 🟡 Payment gateway integration (Razorpay sandbox mode - not live)
+- 🟡 Automated batch payout execution (framework present, final integration pending)
+- 🟡 Real SMS/OTP delivery (demo/sandbox mode - not live)
+- 🟡 Production deployment (demo-ready on Render - single instance)
+
+### ⏳ Roadmap / Not Yet Implemented
+- ❌ Real-time worker geolocation tracking
+- ❌ Automated payout batch processing (live payment)
+- ❌ SMS notification system (framework only)
+- ❌ Document/KYC verification integration
+- ❌ Advanced mobile app features
+- ❌ Full GDPR/regulatory audit
+
+---
+
 ##  Key Performance Indicators (KPIs)
 
 | Metric | Target | Current |
 |--------|--------|---------|
-| Fraud Detection Recall | >95% | Stage implementations in progress |
-| Claims Processing Time | <4 hours | Depends on claims volume |
-| System Uptime | 99.9% | Render SLA: 99.5% |
+| Fraud Detection Recall | >85% | 4-stage pipeline active |
+| Claims Processing Time | <4 hours | Celery async task queue |
+| System Uptime | 99.5% | Render platform SLA |
 | API Response Time (p99) | <500ms | <200ms (optimized) |
 | Database Query Time (p95) | <100ms | <50ms (indexed) |
 | Concurrent Users | 10,000+ | Horizontally scalable |
@@ -133,7 +171,16 @@ BHIMA ASTRA addresses these through:
   - Persistent cache layer for offline resilience
 - **Zustand**: Lightweight client state for UI state (modals, filters, tabs)
 
-#### Worker/Manager Apps
+**Routes Implemented**:
+- `/admin/analytics` - Loss ratio, zone risk, fraud summary dashboards
+- `/admin/claims` - Claim list with filters, audit trails, approve/reject actions
+- `/admin/fraud` - Fraud case management, investigation history
+- `/admin/policies` - Policy management and tracking
+- `/admin/workers` - Worker search with city/platform/fraud score filters
+- `/admin/triggers` - Zone disruption data and trigger simulation
+- `/admin/settings` - Configuration and administrative settings
+
+#### Worker Portal
 - **Vite 5+**: Build tool and development server
   - Instant module replacement (HMR) for developer experience
   - esbuild-powered bundling with tree-shaking
@@ -143,9 +190,40 @@ BHIMA ASTRA addresses these through:
 - **Tailwind CSS**: Consistent styling across apps
 - **Axios**: HTTP client with interceptors for token refresh
 
+**Pages Implemented**:
+- Dashboard - Active policies, event counter, balance overview
+- Events - Last 30 days of disruption events
+- Forecast - 7-day income prediction
+- Login - Phone number entry for OTP
+- Onboarding - Profile setup and platform selection
+- Payouts - Payout history with trigger reasons
+- Plans - Coverage tier details and comparison
+- Policy - Policy creation and management
+- Profile - Personal details and settings
+- Register - New worker registration flow
+
+#### Manager Dashboard
+- **Vite 5+**: Build tool and development server
+- **React 18.2+**: Component library with hooks
+- **TypeScript**: Type-safe component props and state
+- **Tailwind CSS**: Consistent styling
+
+**Components Implemented**:
+- Zone monitoring dashboard
+- Worker directory with policy status
+- Incident escalation form
+- Delivery tracking view
+- Daily operations metrics
+- Role-based access control
+
 #### Landing Page
 - **Next.js 14 + TypeScript**: Marketing site with SEO optimization
 - **Markdown-based content**: CMS-less approach for low maintenance
+
+**Pages Implemented**:
+- Home/Hero - Public landing page with value proposition
+- Get Protected - Iframe wrapper for enrollment flow
+- Portal Navigation - Links to worker, admin, manager dashboards
 
 ### 3. Infrastructure & Deployment
 
@@ -159,18 +237,35 @@ BHIMA ASTRA addresses these through:
   - Volume mounting for code hot-reload
   - Network isolation
 
-#### Cloud Deployment
-- **Render.io**: Platform-as-a-Service (PaaS) providing:
+#### Cloud Deployment Stack
+
+**Backend API**:
+- **Render**: Hosts FastAPI backend
   - Git-based deployments (push-to-deploy)
-  - PostgreSQL managed database with automated backups
-  - Redis managed cache with persistence
-  - SSL/TLS termination
-  - Auto-scaling based on load
+  - Automatic SSL/TLS termination
   - Environment variable management
-- **render.yaml**: Infrastructure-as-Code blueprint
-  - Declarative service definitions
-  - Environment variable propagation
-  - Service networking and dependencies
+  - Auto-scaling based on load
+  - Health check monitoring
+
+**Frontend Applications**:
+- **Vercel**: Hosts Next.js admin dashboard and landing page
+  - Zero-config deployments from GitHub
+  - Automatic builds on git push
+  - Global CDN for fast content delivery
+  - Preview deployments for PRs
+  - Built-in analytics and monitoring
+
+**Worker & Manager Apps** (React + Vite):
+- Deployed to Vercel static hosting
+- Optimized with image compression and code splitting
+
+**Database**:
+- **Neon**: PostgreSQL managed database service
+  - Branching for development environments
+  - Automated backups and point-in-time recovery
+  - Autoscaling storage and compute
+  - Serverless Postgres with connection pooling
+  - Data encrypted at rest and in transit
 
 #### API Gateway & Routing
 - **Uvicorn + Gunicorn**: Multi-worker ASGI server
@@ -705,11 +800,13 @@ X-RateLimit-Reset: 1712313659
 
 ##  Performance & Scalability
 
-### Performance Benchmarks (Local, 4-core, 8GB RAM)
+### Performance Benchmarks (Local Development, 4-core, 8GB RAM - Not Live Validated)
+
+**Note**: These benchmarks are from local testing environments. Live production performance will depend on Render infrastructure and actual workloads.
 
 | Operation | Latency (p99) | Cache | Notes |
 |-----------|---------|-------|-------|
-| Worker OTP login | 120ms | Redis | SMS async |
+| Worker OTP login | 120ms | Redis | SMS async (demo/sandbox mode, not live OTP) |
 | List claims (1M db) | 80ms | DB indices | Sorted by date |
 | Clone fraud score | 45ms | Computed on-demand | 4-stage pipeline |
 | Fraud graph lookup | 15ms | Redis cache | 24-hour TTL |
@@ -781,9 +878,11 @@ Celery Task Queue
 - Connection pooling with heartbeat pings (30s interval)
 - Max 10,000 concurrent connections per server
 
-### Load Capacity Estimates
+### Load Capacity Estimates (Theoretical - Based on Architecture, Not Live Validated)
 
-| Metric | Capacity | Bottleneck |
+These estimates assume proper horizontal scaling and production-ready infrastructure. Current deployment is single-instance demonstration.
+
+| Metric | Estimated Capacity | Bottleneck |
 |--------|----------|-----------|
 | Concurrent Users | 10,000 | PostgreSQL connections (30) |
 | Claims/day | 100,000 | Claims API (Celery queue depth) |
@@ -1270,7 +1369,6 @@ All tables are auto-created on first startup via SQLAlchemy with proper indexing
 The fraud detection system uses a **4-stage ensemble pipeline** designed to balance recall (catching fraud) with precision (minimizing false positives).
 
 ### Pipeline Architecture
-
 ```mermaid
 flowchart TD
     A["<b>Incoming Claim</b><br/>worker_id, amount, date"] --> B["<b>Stage 1: Rule Engine</b><br/>Deterministic Checks<br/>~5ms latency"]
@@ -1393,11 +1491,12 @@ flowchart TD
 
 **Output**: `xgboost_score ∈ [0.0, 1.0]`
 
-**Performance Metrics** (on validation set):
+**Performance Metrics** (on historical validation set - not yet live validated):
 - Precision: 0.87 (87% of flagged are actually fraud)
 - Recall: 0.91 (91% of fraud caught)
 - F1-Score: 0.89
 - ROC-AUC: 0.94
+- **Note**: These are pre-deployment metrics. Live performance will be monitored post-launch.
 
 ### Stage 3: Graph Network Analysis (~200ms, cached)
 
@@ -1610,21 +1709,23 @@ npm test
 
 ## Future Work
 
-**High Priority:**
-- Real-time worker geolocation tracking
-- Premium calculation engine (risk-based pricing)
-- Automated claims approval workflow
-- Notification system (SMS, email, push)
+**Currently Planned (Next Phase)**:
+- Real-time worker geolocation tracking integration
+- Live payment gateway integration (replace Razorpay sandbox)
+- SMS/email notification system (full implementation)
 - Document & KYC verification integration
+- Mobile app deployment (worker/manager)
+- Full production hardening and load testing
+- GDPR and regulatory compliance audit
 
-**Medium Priority:**
-- Complete ML pipeline (Stage 3 & 4)
-- Batch payout processing + payment gateway
-- Audit logging & compliance
-- Advanced analytics & reporting
-- Worker/manager mobile app deployment
+**Long-term Roadmap**:
+- Advanced ML features (GCN for network analysis, LSTM for time-series forecasting)
+- Machine learning model auto-retraining pipeline
+- Advanced analytics & custom reporting
+- Multi-currency support
+- International market expansion
 
-**See:** [Future work analysis](docs/DEPLOY-RENDER.md#future-work) for full roadmap.
+See: [Render Deployment Guide](docs/DEPLOY-RENDER.md) for implementation details.
 
 ---
 
@@ -1698,4 +1799,4 @@ For issues or questions:
 
 ---
 
-**Built with ❤️ for gig economy workers**
+**Designed as solution.. Learnt for life**
