@@ -181,11 +181,11 @@ BHIMA ASTRA addresses these through:
 - `/admin/triggers` - Zone disruption data and trigger simulation
 - `/admin/settings` - Configuration and administrative settings
 
-<img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/5a8bdea0-202d-42e4-bd99-c5619f6e6acb" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/37e8f446-b542-49c1-8438-9c343b65ca9b" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/68a742cd-2ea3-4b6d-8868-5f55a52fbdde" /> 
+<img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/5a8bdea0-202d-42e4-bd99-c5619f6e6acb" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/37e8f446-b542-49c1-8438-9c343b65ca9b" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/68a742cd-2ea3-4b6d-8868-5f55a52fbdde" /> 
 
-<img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/992cffb0-2dbb-42c6-9d18-6896eaff6a53" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/c69eb435-2fdd-4266-b998-06a000034821" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/250d7104-e37d-44a0-879a-84bdb3cffa44" />
+<img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/992cffb0-2dbb-42c6-9d18-6896eaff6a53" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/c69eb435-2fdd-4266-b998-06a000034821" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/250d7104-e37d-44a0-879a-84bdb3cffa44" />
 
-<img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/8152dae0-c010-4a0e-b1a9-3fe207d74da5" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/10e3b290-9011-4f33-ba16-5690ac2a2234" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/e5060845-9951-49f3-a539-e10e82b61985" />
+<img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/8152dae0-c010-4a0e-b1a9-3fe207d74da5" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/10e3b290-9011-4f33-ba16-5690ac2a2234" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/e5060845-9951-49f3-a539-e10e82b61985" />
 
 #### Worker Portal
 - **Vite 5+**: Build tool and development server
@@ -209,11 +209,11 @@ BHIMA ASTRA addresses these through:
 - Profile - Personal details and settings
 - Register - New worker registration flow
 
-<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/97b77d7d-7b57-4380-8b92-f4653fe31b98" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/9fc2468d-2712-425e-a9f0-8ceeb2239e27" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/8e88bf22-b54d-4ab3-9c6f-e5bbab6390eb" />
+<img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/97b77d7d-7b57-4380-8b92-f4653fe31b98" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/9fc2468d-2712-425e-a9f0-8ceeb2239e27" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/8e88bf22-b54d-4ab3-9c6f-e5bbab6390eb" />
 
-<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/f748d198-e343-4313-8c8f-0e773729a2f4" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/8cb10064-c566-407e-adc5-31e7f4e16123" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/4a948c46-d50a-424f-8f5b-9ec5069a775c" />
+<img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/f748d198-e343-4313-8c8f-0e773729a2f4" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/8cb10064-c566-407e-adc5-31e7f4e16123" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/4a948c46-d50a-424f-8f5b-9ec5069a775c" />
 
-<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/a642d34c-abe9-4537-9c8d-684b93c0f26a" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/ca0bf65c-aa1c-44cb-8403-f48f60a53d18" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/ea49e9fe-8736-4e11-a6da-2c91b287ffc1" />
+<img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/a642d34c-abe9-4537-9c8d-684b93c0f26a" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/ca0bf65c-aa1c-44cb-8403-f48f60a53d18" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/ea49e9fe-8736-4e11-a6da-2c91b287ffc1" />
 
 
 #### Manager Dashboard
@@ -230,7 +230,7 @@ BHIMA ASTRA addresses these through:
 - Daily operations metrics
 - Role-based access control
 
-<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/4d610cf4-8d58-4986-8380-05e26422b7d3" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/8d858ea8-3acd-4ee1-ab48-738fa3e33097" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/720150d4-2079-4816-be04-2ed6ca4a9867" />
+<img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/4d610cf4-8d58-4986-8380-05e26422b7d3" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/8d858ea8-3acd-4ee1-ab48-738fa3e33097" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/720150d4-2079-4816-be04-2ed6ca4a9867" />
 
 #### Landing Page
 - **Next.js 14 + TypeScript**: Marketing site with SEO optimization
@@ -241,11 +241,11 @@ BHIMA ASTRA addresses these through:
 - Get Protected - Iframe wrapper for enrollment flow
 - Portal Navigation - Links to worker, admin, manager dashboards
 
-<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/e3bf7018-dc95-46a3-8690-b4161be1eee5" /> <img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/6e9a6037-2b4f-4065-8155-60427d2a2803" /> <img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/94debdc1-233f-40a3-8728-8b9d51b3efdf" /> 
+<img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/e3bf7018-dc95-46a3-8690-b4161be1eee5" /> <img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/6e9a6037-2b4f-4065-8155-60427d2a2803" /> <img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/94debdc1-233f-40a3-8728-8b9d51b3efdf" /> 
 
-<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/110c7cf7-e7e9-473f-a0d4-f75d0b062993" /> <img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/26782cf7-cad8-46f4-a603-a1012517c573" />
+<img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/110c7cf7-e7e9-473f-a0d4-f75d0b062993" /> <img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/26782cf7-cad8-46f4-a603-a1012517c573" />
 
-<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/8f4cd591-da85-4096-b0d5-93b4515a632a" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/27ceb721-f926-40cd-b955-d8805dd42a40" /><img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/91eeae0f-dde1-4a6d-beba-3f86be55d80c" />
+<img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/8f4cd591-da85-4096-b0d5-93b4515a632a" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/27ceb721-f926-40cd-b955-d8805dd42a40" /><img width="410" height="220" alt="image" src="https://github.com/user-attachments/assets/91eeae0f-dde1-4a6d-beba-3f86be55d80c" />
 
 
 ### 3. Infrastructure & Deployment
