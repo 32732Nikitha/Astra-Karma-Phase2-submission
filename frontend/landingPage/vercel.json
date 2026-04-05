@@ -1,5 +1,5 @@
 {
-  "installCommand": "npm install && npm install --prefix ../worker && npm install --prefix ../manager",
+  "installCommand": "npm install --legacy-peer-deps && npm install --prefix ../worker --legacy-peer-deps && npm install --prefix ../manager --legacy-peer-deps",
   "buildCommand": "npm run build",
   "framework": "nextjs"
 }
