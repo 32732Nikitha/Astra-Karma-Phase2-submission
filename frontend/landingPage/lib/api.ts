@@ -1,15 +1,8 @@
 import axios from "axios";
 
+// 🔥 THE HACKATHON FIX: Direct Render Link
 export function getApiBase(): string {
-  const env = process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "");
-  if (env) return env;
-  if (typeof window !== "undefined") {
-    return `${window.location.origin}/api/v1`;
-  }
-  return (
-    process.env.INTERNAL_API_URL?.replace(/\/$/, "") ||
-    "http://127.0.0.1:8000/api/v1"
-  );
+  return "https://astra-karma-phase2-submission.onrender.com/api/v1";
 }
 
 const api = axios.create({
