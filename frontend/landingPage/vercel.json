@@ -1,0 +1,5 @@
+{
+  "installCommand": "npm install && npm install --prefix ../worker && npm install --prefix ../manager",
+  "buildCommand": "npm run build",
+  "framework": "nextjs"
+}

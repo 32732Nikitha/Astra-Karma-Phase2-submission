@@ -1,0 +1,47 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+# In Render Dashboard: New → Blueprint → connect this repo → apply (edit plans/regions as needed).
+
+databases:
+  - name: bhima-postgres
+    databaseName: bhima
+    user: bhima
+    # Pick a plan in the dashboard if this errors (free Postgres may not be available in all regions).
+
+services:
+  # FastAPI backend
+  - type: web
+    name: bhima-api
+    runtime: python
+    plan: free
+    region: oregon
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: bhima-postgres
+          property: connectionString
+      # After bhima-web is deployed, set this to: https://bhima-web.onrender.com (comma-separated if multiple)
+      - key: ALLOWED_ORIGINS
+        sync: false
+      # Optional — add Render Redis and set REDIS_URL for full WS/agent behaviour
+      - key: REDIS_URL
+        sync: false
+
+  # Next.js hub (landing + /admin). Worker/manager Vite apps need a separate production build strategy.
+  - type: web
+    name: bhima-web
+    runtime: node
+    plan: free
+    region: oregon
+    rootDir: frontend/admin
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: "20.18.0"
+      # Public URL of bhima-api, with /api/v1 — no trailing slash after v1
+      - key: NEXT_PUBLIC_API_URL
+        sync: false
