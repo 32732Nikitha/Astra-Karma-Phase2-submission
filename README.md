@@ -34,12 +34,13 @@ BHIMA ASTRA addresses these through:
 3. **Behavioral anomaly detection** with historical baselines
 4. **Automated claims triage** based on risk bands
 5. **Geospatial correlation** linking location, incident, and claims data
+6. **Pandemic and War Situation:** During large-scale disruptions such as pandemics, or socio-political disturbances such as wars, gig workers face significant income volatility due to the lack of responsive financial protection systems. While designing the system, we intentionally chose not to include direct income coverage, as it does not reflect the practical and scalable realities of gig work environments. Income patterns in the gig economy are highly variable and influenced by multiple external factors, making precise loss compensation complex and unreliable. Instead, our approach focuses on parametric triggers and predefined payouts, ensuring faster, transparent, and dependable support during disruptions. This makes the solution more realistic, implementable, and aligned with real-world constraints.
 
 ---
 
 ##  Implementation Status
 
-### ✅ Fully Implemented & Tested
+### Fully Implemented & Tested
 - ✅ OTP-based worker authentication (phone login)
 - ✅ Policy creation, renewal, cancellation, tier upgrades
 - ✅ Claim submission and tracking with audit trails
@@ -59,13 +60,13 @@ BHIMA ASTRA addresses these through:
 - ✅ Event/disruption log (30-day history)
 - ✅ Multi-role dashboards (admin, worker, manager, landing page)
 
-### 🟡 Partially Implemented
+### Partially Implemented
 - 🟡 Payment gateway integration (Razorpay sandbox mode - not live)
 - 🟡 Automated batch payout execution (framework present, final integration pending)
 - 🟡 Real SMS/OTP delivery (demo/sandbox mode - not live)
 - 🟡 Production deployment (demo-ready on Render - single instance)
 
-### ⏳ Roadmap / Not Yet Implemented
+### Roadmap / Future Tasks
 - ❌ Real-time worker geolocation tracking
 - ❌ Automated payout batch processing (live payment)
 - ❌ SMS notification system (framework only)
