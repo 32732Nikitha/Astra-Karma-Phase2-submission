@@ -25,8 +25,8 @@ export default function UpcomingRenewalNudge({ last_active_date }) {
 
       <p className="relative z-10 text-xs text-slate-500 leading-relaxed">
         {urgent
-          ? 'Your GigShield policy has expired. Renew now to restore income protection immediately.'
-          : 'Your weekly GigShield policy expires soon. Renew to keep your income protection active.'}
+          ? 'Your BhimaAstra policy has expired. Renew now to restore income protection immediately.'
+          : 'Your weekly BhimaAstra policy expires soon. Renew to keep your income protection active.'}
       </p>
 
       <div className="relative z-10 rounded-xl overflow-hidden">

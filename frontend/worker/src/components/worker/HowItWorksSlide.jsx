@@ -34,7 +34,7 @@ export default function HowItWorksSlide() {
   return (
     <div className="card p-5 flex flex-col gap-5 h-full">
       <div className="relative z-10 flex items-center justify-between">
-        <p className="text-xs font-bold uppercase tracking-widest text-slate-500">How GigShield Works</p>
+        <p className="text-xs font-bold uppercase tracking-widest text-slate-500">How BhimaAstra Works</p>
         <span className="badge badge-purple">3 Steps</span>
       </div>
 

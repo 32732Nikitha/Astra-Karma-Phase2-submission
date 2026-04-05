@@ -39,7 +39,7 @@ export default function Sidebar() {
           </div>
           <div>
             <div className="font-display font-800 text-[15px] text-slate-900 leading-tight" style={{fontFamily:'Syne,sans-serif',fontWeight:800}}>BHIMA ASTRA</div>
-            <div className="text-[10px] text-slate-400 font-500">GigShield Admin</div>
+            <div className="text-[10px] text-slate-400 font-500">Admin</div>
           </div>
         </div>
       </div>

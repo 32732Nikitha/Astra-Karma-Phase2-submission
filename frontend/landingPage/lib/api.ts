@@ -2,6 +2,14 @@ import axios from "axios";
 
 // 🔥 THE HACKATHON FIX: Direct Render Link
 export function getApiBase(): string {
+  // If running locally in development, use relative path (Next.js will rewrite to backend)
+  if (typeof window !== "undefined") {
+    const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+    if (isLocal) {
+      return "/api/v1";
+    }
+  }
+  // Production: use Render URL
   return "https://astra-karma-phase2-submission.onrender.com/api/v1";
 }
 

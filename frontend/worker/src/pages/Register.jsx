@@ -184,7 +184,7 @@ export default function Register() {
             <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7c3aed, #6d28d9)' }}>
               <span className="text-white text-xs font-bold">G</span>
             </div>
-            <span className="font-semibold text-gray-900">GigShield</span>
+            <span className="font-semibold text-gray-900">BhimaAstra</span>
           </div>
           <Link to="/login" className="text-sm font-medium" style={{ color: '#7c3aed' }}>Login</Link>
         </div>
@@ -570,7 +570,7 @@ export default function Register() {
 
             <div className="rounded-xl p-4" style={{ background: '#f5f3ff', border: '1px solid #ede9fe' }}>
               <p className="text-xs font-semibold mb-1" style={{ color: '#4c1d95' }}>🔒 Your UPI is safe</p>
-              <p className="text-xs" style={{ color: '#6d28d9' }}>GigShield only transfers money to your UPI ID. We never charge you automatically — you pay your premium manually each week.</p>
+              <p className="text-xs" style={{ color: '#6d28d9' }}>BhimaAstra only transfers money to your UPI ID. We never charge you automatically — you pay your premium manually each week.</p>
             </div>
 
             {/* Consent */}
@@ -583,7 +583,7 @@ export default function Register() {
                 style={{ accentColor: '#7c3aed' }}
               />
               <span className="text-sm text-gray-600">
-                I agree to GigShield's{" "}
+                I agree to BhimaAstra's{" "}
                 <a href="#" className="underline" style={{ color: '#7c3aed' }}>Terms of Service</a>{" "}
                 and{" "}
                 <a href="#" className="underline" style={{ color: '#7c3aed' }}>Privacy Policy</a>.
@@ -603,7 +603,7 @@ export default function Register() {
               </svg>
             </div>
             <h2 className="text-xl font-bold text-gray-900">Registration Complete!</h2>
-            <p className="text-sm text-gray-500 max-w-xs">Our AI is calculating your risk profile. Your GigShield account is ready.</p>
+            <p className="text-sm text-gray-500 max-w-xs">Our AI is calculating your risk profile. Your BhimaAstra account is ready.</p>
             <Link
               to="/onboarding"
               className="mt-4 text-white font-semibold px-8 py-3 rounded-xl text-sm transition-colors inline-block"

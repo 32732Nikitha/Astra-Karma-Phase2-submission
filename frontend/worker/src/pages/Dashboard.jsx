@@ -118,7 +118,7 @@ export default function Dashboard() {
           {/* ─── ROW 0: Page title ─── */}
           <motion.div variants={item}>
             <h1 className="section-title text-slate-800">Worker Dashboard</h1>
-            <p className="text-sm font-medium text-slate-500 mt-1">BHIMA ASTRA — GigShield · Ravi Kumar · Bengaluru</p>
+            <p className="text-sm font-medium text-slate-500 mt-1">BHIMA ASTRA — Ravi Kumar · Bengaluru</p>
           </motion.div>
 
           {/* ─── ROW 1: PolicyStatusBanner (full width) ─── */}

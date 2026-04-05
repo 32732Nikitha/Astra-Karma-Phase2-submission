@@ -17,7 +17,7 @@ export default function FirstPaymentCTA({ weeklyPremium = 89, planName = 'Standa
         </div>
         <div className="relative z-10">
           <p className="text-lg font-black text-slate-800">Payment Successful!</p>
-          <p className="text-xs text-slate-500 mt-1">Your GigShield policy is now active</p>
+          <p className="text-xs text-slate-500 mt-1">Your BhimaAstra policy is now active</p>
         </div>
         <span className="badge badge-green relative z-10">Policy Activated</span>
       </div>

@@ -128,7 +128,7 @@ function StepRiskScore({ onNext }) {
         <div className="rounded-xl p-4 flex gap-3" style={{ background: '#f5f3ff', border: '1px solid #ede9fe' }}>
           <span className="text-xl flex-shrink-0">💡</span>
           <p className="text-sm" style={{ color: '#4c1d95' }}>
-            A score of <strong>68</strong> means there's a <strong>68% probability</strong> of at least one qualifying disruption event per week in your zone. GigShield pays you automatically when thresholds are crossed — no claims needed.
+            A score of <strong>68</strong> means there's a <strong>68% probability</strong> of at least one qualifying disruption event per week in your zone. BhimaAstra pays you automatically when thresholds are crossed — no claims needed.
           </p>
         </div>
       )}
@@ -301,7 +301,7 @@ function StepActivation({ onActivate }) {
         </div>
         <div>
           <h3 className="text-2xl font-black text-gray-900">You're Covered!</h3>
-          <p className="text-sm text-gray-500 mt-1">GigShield Standard is now active</p>
+          <p className="text-sm text-gray-500 mt-1">BhimaAstra Standard is now active</p>
         </div>
         <div className="bg-green-50 border border-green-100 rounded-xl px-6 py-4 text-center">
           <p className="text-xs text-green-700 font-medium">Policy ID</p>
@@ -380,7 +380,7 @@ function StepActivation({ onActivate }) {
         <p className="text-sm font-semibold text-gray-900 mb-4">How Payouts Work</p>
         <div className="space-y-4">
           {[
-            { step: "1", icon: "📡", title: "We Watch", desc: "GigShield monitors IMD, CPCB, and traffic data every 15 minutes for your zone." },
+            { step: "1", icon: "📡", title: "We Watch", desc: "BhimaAstra monitors IMD, CPCB, and traffic data every 15 minutes for your zone." },
             { step: "2", icon: "⚡", title: "Auto Trigger", desc: "When a threshold is crossed, your claim is created instantly — no action needed from you." },
             { step: "3", icon: "💸", title: "UPI Payout", desc: "Money hits your UPI ID within 2 hours. You get a push notification immediately." },
           ].map((s) => (
@@ -445,7 +445,7 @@ function StepActivation({ onActivate }) {
       </button>
 
       <p className="text-center text-xs text-gray-400">
-        By activating, you agree to GigShield's{" "}
+        By activating, you agree to BhimaAstra's{" "}
         <a href="#" style={{ color: '#7c3aed' }} className="hover:underline">Terms</a> and{" "}
         <a href="#" style={{ color: '#7c3aed' }} className="hover:underline">Privacy Policy</a>.
         IRDAI-compliant parametric insurance.
@@ -474,7 +474,7 @@ export default function Onboarding() {
               style={{ background: 'linear-gradient(135deg, #7c3aed, #6d28d9)' }}>
               <span className="text-white text-xs font-bold">G</span>
             </div>
-            <span className="font-semibold text-gray-900 text-sm">GigShield</span>
+            <span className="font-semibold text-gray-900 text-sm">BhimaAstra</span>
           </div>
           <span className="text-xs text-gray-400 font-medium">Setup {step + 1}/3</span>
         </div>

@@ -91,7 +91,7 @@ export default class ErrorBoundary extends React.Component {
                 letterSpacing: '-0.3px',
               }}
             >
-              GigShield
+              BhimaAstra
             </span>
           </div>
 

@@ -62,7 +62,7 @@ export default function PolicyStatusBanner({ data }) {
           </div>
           <div>
             <p className="text-xs font-bold tracking-[0.15em] uppercase mb-1" style={{ color: 'var(--text-muted)' }}>
-              BHIMA ASTRA — GigShield
+              BHIMA ASTRA
             </p>
             <div className="flex items-center gap-2">
               <motion.span

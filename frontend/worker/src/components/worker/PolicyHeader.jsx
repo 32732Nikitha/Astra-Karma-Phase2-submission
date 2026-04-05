@@ -29,7 +29,7 @@ export default function PolicyHeader({ policy = {} }) {
               <span className={`badge ${sc.badge}`}>{sc.label}</span>
               <span className="text-white/60 text-xs font-bold">{plan_name} Plan</span>
             </div>
-            <h2 className="text-2xl font-black text-white leading-tight">GigShield Policy</h2>
+            <h2 className="text-2xl font-black text-white leading-tight">BhimaAstra Policy</h2>
             <p className="text-white/60 text-xs font-mono mt-0.5">{policy_number}</p>
           </div>
         </div>
