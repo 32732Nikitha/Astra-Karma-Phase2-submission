@@ -241,7 +241,7 @@ BHIMA ASTRA addresses these through:
 - Get Protected - Iframe wrapper for enrollment flow
 - Portal Navigation - Links to worker, admin, manager dashboards
 
-<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/e3bf7018-dc95-46a3-8690-b4161be1eee5" /> <img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/6e9a6037-2b4f-4065-8155-60427d2a2803" /> <img width="330" height="250" alt="image" src="https://github.com/user-attachments/assets/94debdc1-233f-40a3-8728-8b9d51b3efdf" /> 
+<img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/e3bf7018-dc95-46a3-8690-b4161be1eee5" /> <img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/6e9a6037-2b4f-4065-8155-60427d2a2803" /> <img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/94debdc1-233f-40a3-8728-8b9d51b3efdf" /> 
 
 <img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/110c7cf7-e7e9-473f-a0d4-f75d0b062993" /> <img width="330" height="200" alt="image" src="https://github.com/user-attachments/assets/26782cf7-cad8-46f4-a603-a1012517c573" />
 
