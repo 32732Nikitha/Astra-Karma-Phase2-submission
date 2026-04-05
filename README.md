@@ -180,6 +180,18 @@ BHIMA ASTRA addresses these through:
 - `/admin/triggers` - Zone disruption data and trigger simulation
 - `/admin/settings` - Configuration and administrative settings
 
+<img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/5a8bdea0-202d-42e4-bd99-c5619f6e6acb" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/37e8f446-b542-49c1-8438-9c343b65ca9b" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/68a742cd-2ea3-4b6d-8868-5f55a52fbdde" /> 
+
+<img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/992cffb0-2dbb-42c6-9d18-6896eaff6a53" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/c69eb435-2fdd-4266-b998-06a000034821" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/250d7104-e37d-44a0-879a-84bdb3cffa44" />
+
+<img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/8152dae0-c010-4a0e-b1a9-3fe207d74da5" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/10e3b290-9011-4f33-ba16-5690ac2a2234" /><img width="335" height="200" alt="image" src="https://github.com/user-attachments/assets/e5060845-9951-49f3-a539-e10e82b61985" />
+
+
+
+
+
+
+
 #### Worker Portal
 - **Vite 5+**: Build tool and development server
   - Instant module replacement (HMR) for developer experience
@@ -224,6 +236,11 @@ BHIMA ASTRA addresses these through:
 - Home/Hero - Public landing page with value proposition
 - Get Protected - Iframe wrapper for enrollment flow
 - Portal Navigation - Links to worker, admin, manager dashboards
+
+<img width="370" height="250" alt="image" src="https://github.com/user-attachments/assets/e3bf7018-dc95-46a3-8690-b4161be1eee5" /> <img width="370" height="250" alt="image" src="https://github.com/user-attachments/assets/6e9a6037-2b4f-4065-8155-60427d2a2803" /> <img width="370" height="250" alt="image" src="https://github.com/user-attachments/assets/94debdc1-233f-40a3-8728-8b9d51b3efdf" /> 
+
+<img width="370" height="250" alt="image" src="https://github.com/user-attachments/assets/110c7cf7-e7e9-473f-a0d4-f75d0b062993" /> <img width="2940" height="1912" alt="image" src="https://github.com/user-attachments/assets/26782cf7-cad8-46f4-a603-a1012517c573" />
+
 
 ### 3. Infrastructure & Deployment
 
