@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
@@ -19,10 +23,10 @@
   --text-inverse: #ffffff;
 
   /* Brand */
-  --brand: #2563eb;
-  --brand-light: #dbeafe;
-  --brand-dark: #1d4ed8;
-  --brand-glow: rgba(37, 99, 235, 0.15);
+  --brand: #7c3aed;
+  --brand-light: #ede9fe;
+  --brand-dark: #6d28d9;
+  --brand-glow: rgba(124, 58, 237, 0.15);
 
   /* Status Colors */
   --danger: #dc2626;
@@ -30,19 +34,19 @@
   --danger-border: #fecaca;
   --danger-glow: rgba(220, 38, 38, 0.12);
 
-  --warning: #d97706;
-  --warning-light: #fffbeb;
-  --warning-border: #fde68a;
-  --warning-glow: rgba(217, 119, 6, 0.12);
+  --warning: #8b5cf6;
+  --warning-light: #f3e8ff;
+  --warning-border: #e9d5ff;
+  --warning-glow: rgba(139, 92, 246, 0.12);
 
   --success: #059669;
   --success-light: #ecfdf5;
   --success-border: #a7f3d0;
   --success-glow: rgba(5, 150, 105, 0.12);
 
-  --info: #0891b2;
-  --info-light: #ecfeff;
-  --info-border: #a5f3fc;
+  --info: #7c3aed;
+  --info-light: #f3e8ff;
+  --info-border: #e9d5ff;
 
   /* Shadows */
   --shadow-xs: 0 1px 2px rgba(15, 22, 41, 0.05);
