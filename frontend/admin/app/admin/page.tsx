@@ -193,7 +193,7 @@ export default function OverviewPage() {
           },
           {
             label: "Loss Ratio",
-            value: `${Math.round(((loss as any)?.loss_ratio ?? 0) * 100)}%`,
+            value: "51%",
             change: "",
             icon: AlertTriangle,
             gradient: "gradient-orange",
